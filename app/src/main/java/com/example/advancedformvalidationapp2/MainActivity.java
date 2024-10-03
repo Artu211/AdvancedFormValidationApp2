@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this, "Niepoprawny adres email",Toast.LENGTH_SHORT).show();
                 }
                 else if(phone_value.length() < 9){
-                    Toast.makeText(MainActivity.this, "Niepoprawny Nr.Telefonu",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Zbyt krótki Nr.Telefonu",Toast.LENGTH_SHORT).show();
                 }
                 else if(pass1_value.length() < 6 || !pass1_value.equals(pass2_value)){
                     Toast.makeText(MainActivity.this, "Hasło za krótkie lub Powtórzone hasło jest inne niż pierwsze",Toast.LENGTH_SHORT).show();
