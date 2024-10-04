@@ -52,11 +52,23 @@ public class MainActivity extends AppCompatActivity {
                 else if(!android.util.Patterns.EMAIL_ADDRESS.matcher(email1).matches()){
                     Toast.makeText(MainActivity.this, "Niepoprawny adres email",Toast.LENGTH_SHORT).show();
                 }
-                else if(phone_value.length() < 9){
+                else if(phone_value.isEmpty() ){
+                    Toast.makeText(MainActivity.this, "Podaj Nr.Telefonu",Toast.LENGTH_SHORT).show();
+                }
+                else if(phone_value.length() < 9 ){
                     Toast.makeText(MainActivity.this, "Zbyt krótki Nr.Telefonu",Toast.LENGTH_SHORT).show();
                 }
-                else if(pass1_value.length() < 6 || !pass1_value.equals(pass2_value)){
-                    Toast.makeText(MainActivity.this, "Hasło za krótkie lub Powtórzone hasło jest inne niż pierwsze",Toast.LENGTH_SHORT).show();
+                else if(pass1_value.isEmpty() ){
+                    Toast.makeText(MainActivity.this, "Podaj hasło",Toast.LENGTH_SHORT).show();
+                }
+                else if(pass1_value.length() < 6 ){
+                    Toast.makeText(MainActivity.this, "Zbyt krótkie hasło",Toast.LENGTH_SHORT).show();
+                }
+                else if(pass2_value.isEmpty() ){
+                    Toast.makeText(MainActivity.this, "Potwierdź hasło",Toast.LENGTH_SHORT).show();
+                }
+                else if(!pass1_value.equals(pass2_value)){
+                    Toast.makeText(MainActivity.this, "Powtórzone hasło jest inne niż pierwsze",Toast.LENGTH_SHORT).show();
                 }
                 else{
                     Toast.makeText(MainActivity.this, "Formularz przesłany poprawnie",Toast.LENGTH_SHORT).show();
