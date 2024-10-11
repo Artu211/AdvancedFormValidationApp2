@@ -43,8 +43,11 @@ public class MainActivity extends AppCompatActivity {
                 String phone_value = phone.getText().toString().trim();
                 String pass1_value = pass.getText().toString().trim();
                 String pass2_value = pass2.getText().toString().trim();
-                if(name1.isEmpty() || surname.isEmpty()){
-                    Toast.makeText(MainActivity.this, "Proszę wpisać imię lub nazwisko",Toast.LENGTH_SHORT).show();
+                if(name1.isEmpty()){
+                    Toast.makeText(MainActivity.this, "Proszę wpisać imię",Toast.LENGTH_SHORT).show();
+                }
+                else if(surname.isEmpty()){
+                    Toast.makeText(MainActivity.this, "Proszę wpisać nazwisko",Toast.LENGTH_SHORT).show();
                 }
                 else if(email1.isEmpty()){
                     Toast.makeText(MainActivity.this, "Proszę wpisać email",Toast.LENGTH_SHORT).show();
